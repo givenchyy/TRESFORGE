@@ -16,21 +16,6 @@
   --color-gray-800: #1f2937;
   --color-gray-900: #111827;
   --color-black: #000000;
-  
-  /* Dark theme palette */
-  --color-bg: #000000;
-  --color-surface: #0a0a0a;
-  --color-surface-2: #141414;
-  --color-text: #f5f5f5;
-  --color-text-muted: #9ca3af;
-  --color-accent: #6366f1;
-  --color-accent-dark: #4f46e5;
-  
-  // Typography - premium pairings
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-family-display: 'Unbounded', 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-  
 
   // Apple's signature blue
   --color-blue: #ff5757;
@@ -120,21 +105,10 @@ body {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   line-height: 1.6;
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  color: var(--color-gray-900);
+  background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h1,
-h2,
-h3,
-.section-title,
-.hero-title,
-.service-title,
-.portfolio-title,
-.footer-title {
-  font-family: var(--font-family-display);
 }
 
 // Container - Apple's centered layout
@@ -155,9 +129,9 @@ h3,
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-gray-200);
   transition: all var(--transition-base);
 
   .header-content {
@@ -175,7 +149,7 @@ h3,
     align-items: center;
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
-    color: var(--color-text);
+    color: var(--color-gray-900);
     text-decoration: none;
     letter-spacing: -0.01em;
     background-image: url(../img/tresforge_logo_black.png);
@@ -185,8 +159,8 @@ h3,
     height: 45px;
 
     &:hover {
-      opacity: 0.9;
-      transition: opacity var(--transition-fast);
+      color: var(--color-blue);
+      transition: color var(--transition-fast);
     }
   }
 
@@ -202,13 +176,13 @@ h3,
     .nav-link {
       font-size: var(--font-size-sm);
       font-weight: var(--font-weight-normal);
-      color: var(--color-text-muted);
+      color: var(--color-gray-700);
       text-decoration: none;
       padding: var(--spacing-sm) 0;
       transition: color var(--transition-fast);
 
       &:hover {
-        color: var(--color-text);
+        color: var(--color-gray-900);
       }
     }
   }
@@ -223,7 +197,7 @@ h3,
     display: none;
     background: none;
     border: none;
-    color: var(--color-text-muted);
+    color: var(--color-gray-700);
     cursor: pointer;
     padding: var(--spacing-sm);
 
@@ -233,30 +207,6 @@ h3,
       justify-content: center;
     }
   }
-
-  .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-    padding: var(--spacing-3xl);
-    background: var(--color-surface);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-
-    .mobile-nav-link {
-      color: var(--color-text);
-      text-decoration: none;
-      font-size: var(--font-size-lg);
-      font-weight: var(--font-weight-medium);
-
-      &:hover {
-        color: var(--color-accent);
-      }
-    }
-
-    .mobile-cta {
-      margin-top: var(--spacing-md);
-    }
-  }
 }
 
 // Hero section - Apple's dramatic presentation
@@ -264,7 +214,6 @@ h3,
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: radial-gradient(circle at top left, var(--color-surface) 0%, var(--color-bg) 100%);
   background: linear-gradient(
     135deg,
     var(--color-gray-50) 0%,
@@ -303,21 +252,12 @@ h3,
     }
   }
 
-  .hero-image {
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: var(--radius-2xl);
-      box-shadow: var(--shadow-lg);
-    }
-  }
-
   .hero-title {
     font-size: var(--font-size-7xl);
     font-weight: var(--font-weight-bold);
     line-height: 1.1;
     letter-spacing: -0.02em;
-    color: var(--color-text);
+    color: var(--color-gray-900);
     margin-bottom: var(--spacing-lg);
 
     @media (max-width: 768px) {
@@ -332,7 +272,7 @@ h3,
   .hero-subtitle {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-normal);
-    color: var(--color-text-muted);
+    color: var(--color-gray-600);
     line-height: 1.5;
     margin-bottom: var(--spacing-3xl);
     max-width: 600px;
@@ -381,14 +321,14 @@ h3,
         display: block;
         font-size: var(--font-size-3xl);
         font-weight: var(--font-weight-bold);
-        color: var(--color-accent);
+        color: var(--color-blue);
         margin-bottom: var(--spacing-xs);
         letter-spacing: -0.01em;
       }
 
       .stat-label {
         font-size: var(--font-size-sm);
-        color: var(--color-text-muted);
+        color: var(--color-gray-500);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         font-weight: var(--font-weight-medium);
@@ -415,32 +355,29 @@ h3,
   white-space: nowrap;
 
   &:focus {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-blue);
     outline-offset: 2px;
   }
 
   &.btn-primary {
-    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
+    background: var(--color-blue);
     color: var(--color-white);
 
     &:hover {
-      background: linear-gradient(90deg, var(--color-accent-dark), var(--color-accent));
+      background: var(--color-blue-dark);
       transform: translateY(-1px);
       box-shadow: var(--shadow-lg);
     }
   }
 
   &.btn-secondary {
-    background: transparent;
-    color: var(--color-text);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     background: var(--color-white);
     color: var(--color-blue);
     border: 1px solid var(--color-gray-300);
 
     &:hover {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.3);
+      background: var(--color-gray-50);
+      border-color: var(--color-gray-400);
       transform: translateY(-1px);
       box-shadow: var(--shadow-md);
     }
@@ -464,7 +401,7 @@ h3,
   padding: var(--spacing-6xl) 0;
 
   &.section-gray {
-    background: var(--color-surface);
+    background: var(--color-gray-50);
   }
   .section-box-logo {
     display: flex;
@@ -492,7 +429,7 @@ h3,
       font-weight: var(--font-weight-bold);
       line-height: 1.2;
       letter-spacing: -0.01em;
-      color: var(--color-text);
+      color: var(--color-gray-900);
       margin-bottom: var(--spacing-lg);
 
       @media (max-width: 768px) {
@@ -502,18 +439,10 @@ h3,
 
     p {
       font-size: var(--font-size-lg);
-      color: var(--color-text-muted);
+      color: var(--color-gray-600);
       line-height: 1.6;
     }
   }
-}
-
-// Card base style for dark theme
-.card {
-  background: var(--color-surface-2);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-2xl);
-  box-shadow: none;
 }
 
 // Services grid - Apple's card layout
@@ -528,28 +457,26 @@ h3,
   }
 }
 
-
 .service-card {
-  background: var(--color-surface-2);
+  background: var(--color-white);
   border-radius: var(--radius-2xl);
   padding: var(--spacing-3xl);
   text-align: center;
-  box-shadow: none;
+  box-shadow: var(--shadow);
   transition: all var(--transition-base);
-  border: 1px solid rgba(255, 255, 255, 0.05);
   border: 1px solid var(--color-gray-200);
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-gray-300);
   }
 
   .service-icon {
     width: 80px;
     height: 80px;
     margin: 0 auto var(--spacing-xl);
-    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+    background: var(--color-blue);
     border-radius: var(--radius-2xl);
     display: flex;
     align-items: center;
@@ -565,14 +492,14 @@ h3,
   .service-title {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
-    color: var(--color-text);
+    color: var(--color-gray-900);
     margin-bottom: var(--spacing-md);
     letter-spacing: -0.01em;
   }
 
   .service-description {
     font-size: var(--font-size-base);
-    color: var(--color-text-muted);
+    color: var(--color-gray-600);
     line-height: 1.6;
     margin-bottom: var(--spacing-lg);
   }
@@ -583,7 +510,7 @@ h3,
 
     li {
       padding: var(--spacing-xs) 0;
-      color: var(--color-text-muted);
+      color: var(--color-gray-600);
       font-size: var(--font-size-sm);
       position: relative;
       padding-left: var(--spacing-lg);
@@ -592,7 +519,7 @@ h3,
         content: "✓";
         position: absolute;
         left: 0;
-        color: var(--color-accent);
+        color: var(--color-blue);
         font-weight: var(--font-weight-bold);
       }
     }
@@ -608,9 +535,9 @@ h3,
   flex-wrap: wrap;
 
   .filter-btn {
-    background: var(--color-surface-2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--color-text-muted);
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    color: var(--color-gray-600);
     padding: var(--spacing-sm) var(--spacing-lg);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
@@ -620,9 +547,9 @@ h3,
 
     &:hover,
     &.active {
-      background: var(--color-accent);
+      background: var(--color-blue);
       color: var(--color-white);
-      border-color: var(--color-accent);
+      border-color: var(--color-blue);
       transform: translateY(-1px);
     }
   }
@@ -639,13 +566,12 @@ h3,
   }
 }
 
-  .portfolio-card {
-  background: var(--color-surface-2);
+.portfolio-card {
+  background: var(--color-white);
   border-radius: var(--radius-2xl);
   overflow: hidden;
-  box-shadow: none;
+  box-shadow: var(--shadow);
   transition: all var(--transition-base);
-  border: 1px solid rgba(255, 255, 255, 0.05);
   border: 1px solid var(--color-gray-200);
 
   &:hover {
@@ -656,10 +582,11 @@ h3,
   .portfolio-image {
     width: 100%;
     height: 240px;
-    background: var(--color-surface);
+    background: var(--color-gray-100);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -684,17 +611,17 @@ h3,
 
       .portfolio-year {
         font-size: var(--font-size-sm);
-        color: var(--color-text-muted);
+        color: var(--color-gray-500);
         font-weight: var(--font-weight-medium);
       }
 
       .portfolio-category {
         font-size: var(--font-size-xs);
-        color: var(--color-accent);
+        color: var(--color-blue);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         font-weight: var(--font-weight-semibold);
-        background: var(--color-surface);
+        background: var(--color-gray-100);
         padding: var(--spacing-xs) var(--spacing-sm);
         border-radius: var(--radius);
       }
@@ -703,19 +630,18 @@ h3,
     .portfolio-title {
       font-size: var(--font-size-xl);
       font-weight: var(--font-weight-semibold);
-      color: var(--color-text);
+      color: var(--color-gray-900);
       margin-bottom: var(--spacing-sm);
       letter-spacing: -0.01em;
     }
 
     .portfolio-description {
       font-size: var(--font-size-base);
-      color: var(--color-text-muted);
+      color: var(--color-gray-600);
       line-height: 1.6;
       margin-bottom: var(--spacing-lg);
     }
 
-    .portfolio-technologies {
     .portfolio-tech {
       display: flex;
       gap: var(--spacing-sm);
@@ -723,59 +649,13 @@ h3,
 
       .tech-tag {
         font-size: var(--font-size-xs);
-        color: var(--color-text-muted);
-        background: var(--color-surface);
+        color: var(--color-gray-600);
+        background: var(--color-gray-100);
         padding: var(--spacing-xs) var(--spacing-sm);
         border-radius: var(--radius);
         font-weight: var(--font-weight-medium);
       }
     }
-  }
-  }
-
-  .portfolio-cta {
-    margin-top: var(--spacing-5xl);
-
-    .cta-text {
-      color: var(--color-text-muted);
-      margin-bottom: var(--spacing-lg);
-      font-size: var(--font-size-lg);
-    }
-  }
-
-  // About section - Apple's clean stats
-  .text-gradient {
-  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-5xl);
-  align-items: start;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-4xl);
-  }
-}
-
-.about-text {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-muted);
-  line-height: 1.7;
-
-  .about-subtitle {
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-text);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  p + p {
-    margin-top: var(--spacing-lg);
   }
 }
 
@@ -824,17 +704,15 @@ h3,
   .stat-card {
     text-align: center;
     padding: var(--spacing-2xl);
-    background: var(--color-surface-2);
+    background: var(--color-white);
     border-radius: var(--radius-2xl);
-    box-shadow: none;
-    border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: var(--shadow);
     border: 1px solid var(--color-gray-200);
 
     .stat-number {
       font-size: var(--font-size-4xl);
       font-weight: var(--font-weight-bold);
-      color: var(--color-accent);
+      color: var(--color-blue);
       display: block;
       margin-bottom: var(--spacing-sm);
       letter-spacing: -0.01em;
@@ -842,19 +720,18 @@ h3,
 
     .stat-label {
       font-weight: var(--font-weight-semibold);
-      color: var(--color-text);
+      color: var(--color-gray-900);
       margin-bottom: var(--spacing-xs);
       font-size: var(--font-size-base);
     }
 
     .stat-description {
       font-size: var(--font-size-sm);
-      color: var(--color-text-muted);
+      color: var(--color-gray-600);
       line-height: 1.5;
     }
 
     .stat-icon {
-      color: var(--color-accent);
       color: var(--color-blue);
       margin-bottom: var(--spacing-md);
     }
@@ -880,12 +757,12 @@ h3,
     label {
       display: block;
       font-weight: var(--font-weight-medium);
-      color: var(--color-text);
+      color: var(--color-gray-900);
       margin-bottom: var(--spacing-sm);
       font-size: var(--font-size-sm);
 
       .required {
-        color: var(--color-accent);
+        color: var(--color-blue);
       }
     }
 
@@ -894,22 +771,22 @@ h3,
     textarea {
       width: 100%;
       padding: var(--spacing-md);
-      background: var(--color-surface-2);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-300);
       border-radius: var(--radius-lg);
-      color: var(--color-text);
+      color: var(--color-gray-900);
       font-size: var(--font-size-base);
       font-family: var(--font-family);
       transition: all var(--transition-fast);
 
       &:focus {
         outline: none;
-        border-color: var(--color-accent);
-        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        border-color: var(--color-blue);
+        box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
       }
 
       &::placeholder {
-        color: var(--color-text-muted);
+        color: var(--color-gray-400);
       }
     }
 
@@ -930,7 +807,7 @@ h3,
     .method-icon {
       width: 60px;
       height: 60px;
-      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+      background: var(--color-blue);
       border-radius: var(--radius-xl);
       display: flex;
       align-items: center;
@@ -947,17 +824,17 @@ h3,
     .method-content {
       .method-label {
         font-weight: var(--font-weight-semibold);
-        color: var(--color-text);
+        color: var(--color-gray-900);
         margin-bottom: var(--spacing-xs);
         font-size: var(--font-size-base);
       }
 
       .method-value {
-        color: var(--color-text-muted);
+        color: var(--color-gray-600);
         font-size: var(--font-size-base);
 
         a {
-          color: var(--color-accent);
+          color: var(--color-blue);
           text-decoration: none;
 
           &:hover {
@@ -976,8 +853,8 @@ h3,
 
 // Footer - Apple's minimal footer
 .footer {
-  background: var(--color-bg);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-gray-50);
+  border-top: 1px solid var(--color-gray-200);
   padding: var(--spacing-5xl) 0 var(--spacing-2xl);
 
   .footer-content {
@@ -997,7 +874,7 @@ h3,
     .footer-logo {
       font-size: var(--font-size-xl);
       font-weight: var(--font-weight-semibold);
-      color: var(--color-text);
+      color: var(--color-gray-900);
       text-decoration: none;
       margin-bottom: var(--spacing-md);
       display: block;
@@ -1005,7 +882,7 @@ h3,
     }
 
     .footer-description {
-      color: var(--color-text-muted);
+      color: var(--color-gray-600);
       line-height: 1.6;
       margin-bottom: var(--spacing-lg);
     }
@@ -1021,20 +898,20 @@ h3,
       a {
         width: 40px;
         height: 40px;
-        background: var(--color-surface-2);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: var(--color-white);
+        border: 1px solid var(--color-gray-300);
         border-radius: var(--radius-lg);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--color-text-muted);
+        color: var(--color-gray-600);
         text-decoration: none;
         transition: all var(--transition-fast);
 
         &:hover {
-          background: var(--color-accent);
+          background: var(--color-blue);
           color: var(--color-white);
-          border-color: var(--color-accent);
+          border-color: var(--color-blue);
           transform: translateY(-2px);
         }
 
@@ -1049,7 +926,7 @@ h3,
   .footer-section {
     .footer-title {
       font-weight: var(--font-weight-semibold);
-      color: var(--color-text);
+      color: var(--color-gray-900);
       margin-bottom: var(--spacing-md);
       font-size: var(--font-size-base);
     }
@@ -1060,17 +937,6 @@ h3,
       li {
         margin-bottom: var(--spacing-sm);
 
-        a,
-        button {
-          color: var(--color-text-muted);
-          text-decoration: none;
-          font-size: var(--font-size-sm);
-          transition: color var(--transition-fast);
-          background: none;
-          border: none;
-          padding: 0;
-          font-family: inherit;
-          cursor: pointer;
         a {
           color: var(--color-gray-600);
           text-decoration: none;
@@ -1078,7 +944,7 @@ h3,
           transition: color var(--transition-fast);
 
           &:hover {
-            color: var(--color-text);
+            color: var(--color-gray-900);
           }
         }
       }
@@ -1086,12 +952,12 @@ h3,
   }
 
   .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--color-gray-200);
     padding-top: var(--spacing-lg);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--color-text-muted);
+    color: var(--color-gray-500);
     font-size: var(--font-size-sm);
 
     @media (max-width: 768px) {
@@ -1099,8 +965,6 @@ h3,
       gap: var(--spacing-md);
       text-align: center;
     }
-    
-    .footer-legal {
 
     .footer-links {
       display: flex;
@@ -1113,37 +977,15 @@ h3,
       }
 
       a {
-        color: var(--color-text-muted);
+        color: var(--color-gray-500);
         text-decoration: none;
         transition: color var(--transition-fast);
 
         &:hover {
-          color: var(--color-text);
+          color: var(--color-gray-700);
         }
       }
     }
-  }
-}
-
-.scroll-to-top {
-  position: fixed;
-  bottom: var(--spacing-2xl);
-  right: var(--spacing-2xl);
-  width: 48px;
-  height: 48px;
-  border: none;
-  border-radius: var(--radius-full);
-  background: var(--color-accent);
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: var(--shadow-lg);
-  transition: background var(--transition-fast);
-
-  &:hover {
-    background: var(--color-accent-dark);
   }
 }
 

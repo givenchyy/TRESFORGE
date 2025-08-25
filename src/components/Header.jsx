@@ -23,9 +23,6 @@ const Header = () => {
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-content container">
         {/* Логотип */}
-        <a href="#home" className="logo" onClick={() => scrollToSection('home')}>
-          <span className="text-gradient">TRESFORGE</span>
-        </a>
 
         <TresforgeLogo size={50} duration={6} />
 

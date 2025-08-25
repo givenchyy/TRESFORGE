@@ -1,6 +1,3 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import heroImage from '../assets/images/analytics-dashboard.png';
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import heroImage from "../assets/images/analytics-dashboard.png";
@@ -22,15 +19,12 @@ const Hero = () => {
               Создаем цифровые решения нового поколения
             </h1>
             <p className="hero-subtitle">
-              DevOps, веб-дизайн и разработка на высшем уровне.
-              Превращаем ваши идеи в элегантные, масштабируемые решения.
               DevOps, веб-дизайн и разработка на высшем уровне. Превращаем ваши
               идеи в элегантные, масштабируемые решения.
             </p>
 
             <div className="hero-actions">
               <button
-                onClick={() => scrollToSection('portfolio')}
                 onClick={() => scrollToSection("portfolio")}
                 className="btn btn-primary btn-lg"
               >
@@ -38,7 +32,6 @@ const Hero = () => {
                 <ArrowRight size={20} />
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
                 onClick={() => scrollToSection("contact")}
                 className="btn btn-secondary btn-lg"
               >
@@ -47,10 +40,6 @@ const Hero = () => {
             </div>
 
             <div className="hero-stats">
-              <div className="stat-item">
-                <span className="stat-number">50+</span>
-                <span className="stat-label">проектов</span>
-              </div>
               {/* <div className="stat-item">
                 <span className="stat-number">50+</span>
                 <span className="stat-label">проектов</span>
