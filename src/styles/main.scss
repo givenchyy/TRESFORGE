@@ -632,6 +632,41 @@ body {
 }
 
 // About section - Apple's clean stats
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-blue), #6c47ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-5xl);
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4xl);
+  }
+}
+
+.about-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-700);
+  line-height: 1.7;
+
+  .about-subtitle {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  p + p {
+    margin-top: var(--spacing-lg);
+  }
+}
+
 .about-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -666,6 +701,11 @@ body {
       font-size: var(--font-size-sm);
       color: var(--color-gray-600);
       line-height: 1.5;
+    }
+
+    .stat-icon {
+      color: var(--color-blue);
+      margin-bottom: var(--spacing-md);
     }
   }
 }
