@@ -234,6 +234,8 @@ body {
   display: flex;
   align-items: center;
   background: radial-gradient(circle at top left, var(--color-surface) 0%, var(--color-bg) 100%);
+  background: radial-gradient(circle at top left, var(--color-surface) 0%, var(--color-bg) 100%);
+  background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-white) 100%);
   padding: var(--spacing-6xl) 0 var(--spacing-5xl);
 
   .hero-grid {
@@ -576,7 +578,7 @@ body {
   }
 }
 
-  .portfolio-card {
+.portfolio-card {
   background: var(--color-surface-2);
   border-radius: var(--radius-2xl);
   overflow: hidden;
@@ -707,6 +709,45 @@ body {
     font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-semibold);
     color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  p + p {
+    margin-top: var(--spacing-lg);
+  }
+}
+
+// About section - Apple's clean stats
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
+  background: linear-gradient(90deg, var(--color-blue), #6c47ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-5xl);
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4xl);
+  }
+}
+
+.about-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  color: var(--color-gray-700);
+  line-height: 1.7;
+
+  .about-subtitle {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    color: var(--color-gray-900);
     margin-bottom: var(--spacing-lg);
   }
 
@@ -954,6 +995,7 @@ body {
 
         a,
         button {
+        a {
           color: var(--color-text-muted);
           text-decoration: none;
           font-size: var(--font-size-sm);
