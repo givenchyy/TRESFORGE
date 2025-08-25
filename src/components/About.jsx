@@ -1,25 +1,25 @@
-import React from 'react';
-import { Users, Award, Clock, Target } from 'lucide-react';
-
+import React from "react";
+import { Users, Award, Clock, Target } from "lucide-react";
+import TresforgeLogo from "./TresforgeLogo";
 const About = () => {
   const stats = [
     {
       icon: <Users size={32} />,
-      number: '15+',
-      label: 'Специалистов в команде',
-      description: 'Опытные разработчики, дизайнеры и DevOps инженеры'
+      number: "15+",
+      label: "Специалистов в команде",
+      description: "Опытные разработчики, дизайнеры и DevOps инженеры",
     },
     {
       icon: <Award size={32} />,
-      number: '50+',
-      label: 'Завершенных проектов',
-      description: 'Успешно реализованные решения для различных отраслей'
+      number: "50+",
+      label: "Завершенных проектов",
+      description: "Успешно реализованные решения для различных отраслей",
     },
     {
       icon: <Clock size={32} />,
-      number: '3',
-      label: 'Года на рынке',
-      description: 'Стабильный рост и развитие компании'
+      number: "3",
+      label: "Года на рынке",
+      description: "Стабильный рост и развитие компании",
     },
     {
       icon: <Target size={32} />,
@@ -27,18 +27,17 @@ const About = () => {
       label: 'Довольных клиентов',
       description: 'Высокий уровень удовлетворенности наших заказчиков'
     }
+      number: "98%",
+      label: "Довольных клиентов",
+      description: "Высокий уровень удовлетворенности наших заказчиков",
+    },
   ];
 
   return (
     <section id="about" className="section section-gray">
       <div className="container">
-        <div className="section-header text-center">
-          <h2 className="section-title">
-            О <span className="text-gradient">TRESFORGE</span>
-          </h2>
-          <p className="section-description">
-            Мы - команда профессионалов, создающая цифровые решения мирового уровня
-          </p>
+        <div className="section-header section-box-logo text-center">
+          <TresforgeLogo size={120} duration={6} />
         </div>
 
         <div className="about-content">
@@ -57,6 +56,20 @@ const About = () => {
             </p>
           </div>
 
+              TRESFORGE была основана с целью помочь компаниям любого размера
+              реализовать цифровые амбиции. Мы объединяем креативность дизайна,
+              мощь современных технологий и надежность DevOps-практик, чтобы
+              создавать продукты, которые не только решают бизнес-задачи, но и
+              вдохновляют пользователей.
+            </p>
+            <p>
+              Наша команда состоит из опытных специалистов, каждый из которых
+              является экспертом в своей области. Мы постоянно изучаем новые
+              технологии и методологии, чтобы предлагать нашим клиентам самые
+              эффективные решения.
+            </p>
+          </div>
+          {/* 
           <div className="about-stats">
             {stats.map((stat) => (
               <div key={stat.label} className="stat-card">
@@ -67,6 +80,7 @@ const About = () => {
               </div>
             ))}
           </div>
+          </div> */}
         </div>
       </div>
     </section>
@@ -74,4 +88,3 @@ const About = () => {
 };
 
 export default About;
-

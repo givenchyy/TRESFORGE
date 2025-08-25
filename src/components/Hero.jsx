@@ -1,12 +1,15 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '../assets/images/analytics-dashboard.png';
+import React from "react";
+import { ArrowRight } from "lucide-react";
+import heroImage from "../assets/images/analytics-dashboard.png";
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -21,11 +24,14 @@ const Hero = () => {
             <p className="hero-subtitle">
               DevOps, веб-дизайн и разработка на высшем уровне.
               Превращаем ваши идеи в элегантные, масштабируемые решения.
+              DevOps, веб-дизайн и разработка на высшем уровне. Превращаем ваши
+              идеи в элегантные, масштабируемые решения.
             </p>
 
             <div className="hero-actions">
               <button
                 onClick={() => scrollToSection('portfolio')}
+                onClick={() => scrollToSection("portfolio")}
                 className="btn btn-primary btn-lg"
               >
                 Посмотреть работы
@@ -33,6 +39,7 @@ const Hero = () => {
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection("contact")}
                 className="btn btn-secondary btn-lg"
               >
                 Начать проект
@@ -44,6 +51,10 @@ const Hero = () => {
                 <span className="stat-number">50+</span>
                 <span className="stat-label">проектов</span>
               </div>
+              {/* <div className="stat-item">
+                <span className="stat-number">50+</span>
+                <span className="stat-label">проектов</span>
+              </div> */}
               <div className="stat-item">
                 <span className="stat-number">3</span>
                 <span className="stat-label">года опыта</span>
@@ -64,4 +75,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
