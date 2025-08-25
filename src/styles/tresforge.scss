@@ -1,0 +1,77 @@
+@keyframes tg-shift-1 {
+  0% {
+    stop-color: #ff007f;
+  }
+  33% {
+    stop-color: #a832ff;
+  }
+  66% {
+    stop-color: #ff9900;
+  }
+  100% {
+    stop-color: #ff007f;
+  }
+}
+@keyframes tg-shift-2 {
+  0% {
+    stop-color: #a832ff;
+  }
+  33% {
+    stop-color: #ff9900;
+  }
+  66% {
+    stop-color: #ff007f;
+  }
+  100% {
+    stop-color: #a832ff;
+  }
+}
+@keyframes tg-shift-3 {
+  0% {
+    stop-color: #ff9900;
+  }
+  33% {
+    stop-color: #ff007f;
+  }
+  66% {
+    stop-color: #a832ff;
+  }
+  100% {
+    stop-color: #ff9900;
+  }
+}
+@keyframes tg-pan {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.tg-s1 {
+  animation: tg-shift-1 var(--tg-duration, 6s) linear infinite;
+}
+.tg-s2 {
+  animation: tg-shift-2 var(--tg-duration, 6s) linear infinite;
+}
+.tg-s3 {
+  animation: tg-shift-3 var(--tg-duration, 6s) linear infinite;
+}
+
+.tg-gradient-move {
+  transform-origin: 50% 50%;
+  animation: tg-pan calc(var(--tg-duration, 6s) * 1.2) ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tg-s1,
+  .tg-s2,
+  .tg-s3,
+  .tg-gradient-move {
+    animation: none !important;
+  }
+}
