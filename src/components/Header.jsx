@@ -31,7 +31,7 @@ const Header = () => {
       <div className="header-content container">
         {/* Логотип */}
         <a href="#home" className="logo" onClick={() => scrollToSection('home')}>
-          TRESFORGE
+          <span className="text-gradient">TRESFORGE</span>
         </a>
 
         {/* Навигация для десктопа */}
